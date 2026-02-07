@@ -33,6 +33,8 @@ Design a system where:
 ### DONE
 - **start: backend -> frontend progress marker**: commit `5dff73e`
  - **commit remaining files (backend & web)**: commit `9ee1032`
+ - **backend (auth & security)**: added `SecurityConfig.java`, `AuthController.java`, `UserController.java`, `AuthService.java`, `User.java`, `JwtTokenProvider.java`, `JwtAuthenticationFilter.java`, `CustomUserDetailsService.java` — commit `9ee1032`
+ - **frontend (auth UI & wiring)**: added `web/src/pages/Login.jsx`, `web/src/pages/Register.jsx`, `web/src/pages/Home.jsx`, `web/src/pages/Dashboard.jsx`, `web/src/components/ProtectedRoute.jsx`, `web/src/context/AuthContext.jsx`, `web/src/api/authApi.js` — commit `9ee1032`
 
 ---
 
