@@ -1,21 +1,86 @@
+/* Home Page Layout */
 .home-page {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 4rem 1.5rem;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  /* Background Gradient */
+  background: linear-gradient(135deg, #f0f4ff, #e2e8f0);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: #1f2937; /* Dark gray text for readability */
 }
 
+/* Main Heading */
 .home-page h1 {
-  margin: 0 0 1rem;
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1e3a8a; /* Strong blue for heading */
 }
 
+/* Description Paragraph */
 .home-page p {
-  margin: 0;
-  font-size: 1.1rem;
+  max-width: 600px;
+  margin-bottom: 3rem;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #4b5563; /* Softer gray-blue for body text */
 }
 
-.home-page a {
+/* Buttons Container */
+.home-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Call-to-Action Buttons */
+.cta-button {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  border-radius: 10px;
   font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #2563eb; /* Primary blue */
+  transition: all 0.25s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #1e40af; /* Darker blue on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Separator Text */
+.button-separator {
+  display: flex;
+  align-items: center;
+  color: #6b7280; /* Medium gray for "or" */
+  font-weight: 500;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .home-page h1 {
+    font-size: 2rem;
+  }
+
+  .home-page p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .cta-button {
+    padding: 0.75rem 1.5rem;
+  }
 }

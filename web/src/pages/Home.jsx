@@ -7,18 +7,30 @@ export default function Home() {
 
   return (
     <div className="home-page">
-      <h1>Welcome</h1>
+      <h1>Welcome to Our Platform</h1>
       <p>
+        {isAuthenticated
+          ? "Access your dashboard to manage your account and explore features."
+          : "Log in or register to get started and experience all the benefits."}
+      </p>
+
+      <div className="home-buttons">
         {isAuthenticated ? (
-          <>
-            <Link to="/dashboard">Go to Dashboard</Link>
-          </>
+          <Link className="cta-button" to="/dashboard">
+            Go to Dashboard
+          </Link>
         ) : (
           <>
-            <Link to="/login">Log In</Link> or <Link to="/register">Register</Link> to get started.
+            <Link className="cta-button" to="/login">
+              Log In
+            </Link>
+            <span className="button-separator">or</span>
+            <Link className="cta-button" to="/register">
+              Register
+            </Link>
           </>
         )}
-      </p>
+      </div>
     </div>
   );
 }
