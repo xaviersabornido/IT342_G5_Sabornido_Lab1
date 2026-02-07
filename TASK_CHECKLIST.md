@@ -26,11 +26,12 @@ Design a system where:
 - [ ] Prepare sequence diagrams (registration, login, logout)
 - [ ] Create simple wireframes for registration/login/dashboard pages
 
-### In Progress
-- [ ] Create TODO/In Progress/Done structure in TASK_CHECKLIST.md (this file)
+### IN-PROGRESS
+- [ ] Create TODO/IN-PROGRESS/DONE structure in TASK_CHECKLIST.md (this file)
+- [ ] Scan project for CVEs
 
-### Done
-- [ ] (empty)
+### DONE
+- **start: backend -> frontend progress marker**: commit `5dff73e`
 
 ---
 
@@ -43,4 +44,4 @@ Design a system where:
 
 ---
 
-_Last updated: _
+_Last updated: 2026-02-07 — updated by automated task commit_
