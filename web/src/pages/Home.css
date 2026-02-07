@@ -1,86 +1,110 @@
-/* Home Page Layout */
+/* Home Page – full bleed background, centered card */
 .home-page {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4rem 1.5rem;
-  text-align: center;
-  max-width: 1000px;
-  margin: 0 auto;
-
-  /* Background Gradient */
-  background: linear-gradient(135deg, #f0f4ff, #e2e8f0);
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+  background: linear-gradient(160deg, #0f172a 0%, #1e293b 50%, #334155 100%);
   font-family: "Inter", system-ui, -apple-system, sans-serif;
-  color: #1f2937; /* Dark gray text for readability */
 }
 
-/* Main Heading */
-.home-page h1 {
-  margin-bottom: 1rem;
-  font-size: clamp(2rem, 5vw, 2.8rem);
-  font-weight: 700;
-  line-height: 1.2;
-  color: #1e3a8a; /* Strong blue for heading */
+@media (min-width: 640px) {
+  .home-page {
+    padding: 3rem 2rem;
+  }
 }
 
-/* Description Paragraph */
-.home-page p {
+/* Card – single focal block */
+.home-card {
+  width: 100%;
   max-width: 600px;
-  margin-bottom: 3rem;
-  font-size: 1.125rem;
-  line-height: 1.7;
-  color: #4b5563; /* Softer gray-blue for body text */
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.06);
+  text-align: center;
+  box-sizing: border-box;
 }
 
-/* Buttons Container */
-.home-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
+.home-card h1 {
+  margin: 0 0 0.75rem;
+  font-size: 1.875rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #0f172a;
 }
 
-/* Call-to-Action Buttons */
-.cta-button {
-  display: inline-block;
-  padding: 0.85rem 2rem;
-  border-radius: 10px;
-  font-weight: 600;
+.home-card-lead {
+  margin: 0 0 2rem;
   font-size: 1rem;
-  text-decoration: none;
-  color: #ffffff;
-  background-color: #2563eb; /* Primary blue */
-  transition: all 0.25s ease-in-out;
+  line-height: 1.6;
+  color: #475569;
 }
 
-.cta-button:hover {
-  background-color: #1e40af; /* Darker blue on hover */
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Separator Text */
-.button-separator {
+.home-actions {
   display: flex;
-  align-items: center;
-  color: #6b7280; /* Medium gray for "or" */
-  font-weight: 500;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .home-page h1 {
-    font-size: 2rem;
+.home-actions .home-btn:only-child {
+  width: 100%;
+}
+
+.home-btn {
+  display: inline-block;
+  padding: 0.875rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
+  box-sizing: border-box;
+}
+
+.home-btn-primary {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+}
+
+.home-btn-primary:hover {
+  background: #1d4ed8;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+  transform: translateY(-1px);
+}
+
+.home-btn-secondary {
+  background: transparent;
+  color: #475569;
+  border: 2px solid #e2e8f0;
+}
+
+.home-btn-secondary:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+@media (min-width: 480px) {
+  .home-actions {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
   }
 
-  .home-page p {
-    font-size: 1rem;
-    padding: 0 1rem;
+  .home-actions .home-btn {
+    min-width: 140px;
   }
+}
 
-  .cta-button {
-    padding: 0.75rem 1.5rem;
+@media (prefers-color-scheme: light) {
+  .home-page {
+    background: linear-gradient(160deg, #1e3a8a 0%, #2563eb 40%, #3b82f6 100%);
   }
 }

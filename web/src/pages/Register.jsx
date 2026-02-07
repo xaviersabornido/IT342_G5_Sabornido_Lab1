@@ -11,7 +11,7 @@ export default function Register() {
   const [error, setError] = useState('');
   const [submitting, setSubmitting] = useState(false);
 
-  const { register, isAuthenticated } = useAuth();
+  const { register, logout, isAuthenticated } = useAuth();
   const navigate = useNavigate();
 
   if (isAuthenticated) {
@@ -33,7 +33,8 @@ export default function Register() {
     setSubmitting(true);
     try {
       await register(username, email, password);
-      navigate('/dashboard', { replace: true });
+      logout(); // Don't stay logged in; user must sign in from login page
+      navigate('/login', { replace: true });
     } catch (err) {
       setError(err.message || 'Registration failed');
     } finally {
