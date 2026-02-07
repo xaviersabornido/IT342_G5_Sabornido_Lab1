@@ -1,22 +1,16 @@
-/* Home Page – full bleed background, centered card */
+/* Home Page – fills entire screen */
 .home-page {
+  width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 1.5rem;
   box-sizing: border-box;
   background: linear-gradient(160deg, #0f172a 0%, #1e293b 50%, #334155 100%);
   font-family: "Inter", system-ui, -apple-system, sans-serif;
 }
 
-@media (min-width: 640px) {
-  .home-page {
-    padding: 3rem 2rem;
-  }
-}
-
-/* Card – single focal block */
+/* Card – centered on full-page background */
 .home-card {
   width: 100%;
   max-width: 600px;
@@ -28,6 +22,7 @@
     0 0 0 1px rgba(255, 255, 255, 0.06);
   text-align: center;
   box-sizing: border-box;
+  margin: 2rem;
 }
 
 .home-card h1 {
