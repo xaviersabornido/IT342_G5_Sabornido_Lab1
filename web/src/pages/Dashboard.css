@@ -1,0 +1,94 @@
+.dashboard-page {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+}
+
+.dashboard-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-badge {
+  padding: 0.4rem 0.8rem;
+  background: rgba(100, 108, 255, 0.2);
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.btn-logout {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid rgba(255, 100, 100, 0.5);
+  color: #ff6b6b;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.btn-logout:hover {
+  background: rgba(255, 100, 100, 0.1);
+}
+
+.dashboard-content {
+  max-width: 600px;
+}
+
+.profile-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-card h2 {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+}
+
+.profile-card dl {
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.profile-card dt {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.profile-card dd {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.loading-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (prefers-color-scheme: light) {
+  .profile-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+  .profile-card dt {
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
