@@ -32,6 +32,7 @@ Design a system where:
 
 ### DONE
 - **start: backend -> frontend progress marker**: commit `5dff73e`
+ - **commit remaining files (backend & web)**: commit `9ee1032`
 
 ---
 
