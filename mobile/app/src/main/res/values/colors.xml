@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Match web app: primary / auth button -->
+    <color name="primary">#646CFF</color>
+    <color name="primary_dark">#535BF2</color>
+    <!-- Home primary (web Home.css) -->
+    <color name="home_primary">#2563EB</color>
+    <color name="home_primary_dark">#1D4ED8</color>
+
+    <!-- Dark gradient (Dashboard / Auth background) -->
+    <color name="bg_dark_1">#0F172A</color>
+    <color name="bg_dark_2">#1E293B</color>
+    <color name="bg_dark_3">#334155</color>
+
+    <!-- Card / surface -->
+    <color name="card_bg">#0DFFFFFF</color>
+    <color name="card_border">#1AFFFFFF</color>
+    <color name="input_bg">#33000000</color>
+    <color name="input_border">#33FFFFFF</color>
+    <color name="focus_border">#646CFF</color>
+
+    <!-- Error -->
+    <color name="error_bg">#33DC3545</color>
+    <color name="error_border">#80DC3545</color>
+    <color name="error_text">#FF6B6B</color>
+
+    <!-- Dashboard profile / badge -->
+    <color name="user_badge_bg">#333B82F6</color>
+    <color name="user_badge_border">#663B82F6</color>
+    <color name="user_badge_text">#93C5FD</color>
+    <color name="logout_border">#99FF6384</color>
+    <color name="logout_text">#FF6B6B</color>
+    <color name="text_primary">#E2E8F0</color>
+    <color name="text_secondary">#80FFFFFF</color>
+</resources>

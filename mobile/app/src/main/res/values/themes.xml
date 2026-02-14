@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme – match web dark gradient feel -->
+    <style name="Base.Theme.Mobile" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:statusBarColor">@color/bg_dark_1</item>
+        <item name="android:navigationBarColor">@color/bg_dark_1</item>
+        <item name="android:windowBackground">@color/bg_dark_1</item>
+    </style>
+
+    <style name="Theme.Mobile" parent="Base.Theme.Mobile" />
+</resources>
