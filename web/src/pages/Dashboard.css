@@ -1,33 +1,43 @@
+/* ========== PAGE BACKGROUND ========== */
 .dashboard-page {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     /* vertical center */
+  align-items: center;         /* horizontal center */
+  padding: 2rem;
   box-sizing: border-box;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
+
+  /* Professional dark gradient background */
+  background: linear-gradient(135deg, #0f172a, #1e293b, #0f172a);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
 }
 
-@media (min-width: 640px) {
-  .dashboard-page {
-    padding: 2.5rem 2rem;
-  }
+/* Smooth animated background */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
+/* ========== HEADER ========== */
 .dashboard-header {
+  width: 100%;
+  max-width: 900px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 2.25rem;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding-bottom: 1.25rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .dashboard-header h1 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
-  letter-spacing: -0.02em;
+  color: #ffffff;
 }
 
 .dashboard-actions {
@@ -38,83 +48,105 @@
 
 .user-badge {
   padding: 0.5rem 1rem;
-  background: rgba(100, 108, 255, 0.2);
-  border-radius: 10px;
+  background: rgba(59, 130, 246, 0.2);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  border-radius: 12px;
   font-weight: 500;
   font-size: 0.9rem;
+  color: #93c5fd;
 }
 
 .btn-logout {
   padding: 0.5rem 1.125rem;
   background: transparent;
-  border: 1px solid rgba(255, 100, 100, 0.5);
+  border: 1px solid rgba(255, 99, 132, 0.6);
   color: #ff6b6b;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
   font-size: 0.95rem;
   font-weight: 500;
-  transition: background 0.2s;
+  transition: all 0.2s ease;
 }
 
 .btn-logout:hover {
-  background: rgba(255, 100, 100, 0.1);
+  background: rgba(255, 99, 132, 0.1);
 }
 
+/* ========== CONTENT WRAPPER ========== */
 .dashboard-content {
-  max-width: 640px;
+  width: 100%;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
 }
 
+/* ========== MAIN PROFILE CARD ========== */
 .profile-card {
-  padding: 2rem 1.75rem;
-  border-radius: 16px;
+  padding: 2rem;
+  border-radius: 18px;
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
-  box-sizing: border-box;
-  text-align: center;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-6px);
 }
 
 .profile-card h2 {
-  margin: 0 0 1.25rem;
-  font-size: 1.25rem;
+  margin: 0 0 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
-  letter-spacing: -0.02em;
+  color: #ffffff;
 }
 
 .profile-card dl {
   margin: 0;
   display: grid;
   gap: 1rem;
-  justify-items: center;
 }
 
 .profile-card dt {
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .profile-card dd {
   margin: 0;
   font-size: 1rem;
-  padding-left: 0;
+  color: #e2e8f0;
 }
 
-.loading-screen {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* ========== EXTRA DASHBOARD CARDS ========== */
+.dashboard-card {
+  padding: 1.5rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  .profile-card {
-    background: rgba(255, 255, 255, 0.9);
-    border-color: rgba(0, 0, 0, 0.1);
-  }
-  .profile-card dt {
-    color: rgba(0, 0, 0, 0.6);
-  }
+.dashboard-card:hover {
+  transform: translateY(-6px);
+}
+
+.dashboard-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.dashboard-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #cbd5e1;
 }
