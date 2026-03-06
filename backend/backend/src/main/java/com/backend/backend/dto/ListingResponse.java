@@ -10,6 +10,7 @@ public class ListingResponse {
     private String description;
     private BigDecimal price;
     private String location;
+    private java.util.List<String> photoUrls;
     private String propertyType;
     private String status;
     private Long ownerId;
@@ -21,13 +22,14 @@ public class ListingResponse {
     }
 
     public ListingResponse(Long id, String title, String description, BigDecimal price, String location,
-                           String propertyType, String status, Long ownerId, String ownerUsername,
+                           java.util.List<String> photoUrls, String propertyType, String status, Long ownerId, String ownerUsername,
                            LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.price = price;
         this.location = location;
+        this.photoUrls = photoUrls;
         this.propertyType = propertyType;
         this.status = status;
         this.ownerId = ownerId;
@@ -74,6 +76,14 @@ public class ListingResponse {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public java.util.List<String> getPhotoUrls() {
+        return photoUrls;
+    }
+
+    public void setPhotoUrls(java.util.List<String> photoUrls) {
+        this.photoUrls = photoUrls;
     }
 
     public String getPropertyType() {

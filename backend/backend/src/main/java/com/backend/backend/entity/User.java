@@ -61,7 +61,7 @@ public class User {
         createdAt = LocalDateTime.now();
         updatedAt = LocalDateTime.now();
         if (role == null || role.isEmpty()) {
-            role = "USER";
+            role = "RENTER";
         }
         if (roles.isEmpty()) {
             roles.add(role);

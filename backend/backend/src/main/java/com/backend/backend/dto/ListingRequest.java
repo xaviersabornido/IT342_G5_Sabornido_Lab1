@@ -18,6 +18,9 @@ public class ListingRequest {
     @NotBlank(message = "Location is required")
     private String location;
 
+    // URLs for photos of this listing (main + additional)
+    private java.util.List<String> photoUrls;
+
     @NotBlank(message = "Property type is required")
     private String propertyType;
 
@@ -56,6 +59,14 @@ public class ListingRequest {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public java.util.List<String> getPhotoUrls() {
+        return photoUrls;
+    }
+
+    public void setPhotoUrls(java.util.List<String> photoUrls) {
+        this.photoUrls = photoUrls;
     }
 
     public String getPropertyType() {

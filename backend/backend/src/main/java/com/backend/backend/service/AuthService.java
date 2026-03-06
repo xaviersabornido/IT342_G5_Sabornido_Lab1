@@ -37,6 +37,15 @@ public class AuthService {
                 request.getEmail(),
                 passwordEncoder.encode(request.getPassword())
         );
+        String role = (request.getRole() != null && !request.getRole().isBlank())
+                ? request.getRole().toUpperCase()
+                : "RENTER";
+        if (!role.equals("RENTER") && !role.equals("OWNER")) {
+            role = "RENTER";
+        }
+        user.setRole(role);
+        user.getRoles().clear();
+        user.getRoles().add(role);
         user = userRepository.save(user);
 
         String token = tokenProvider.generateToken(user);
