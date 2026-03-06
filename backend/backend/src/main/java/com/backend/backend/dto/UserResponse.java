@@ -1,25 +1,28 @@
 package com.backend.backend.dto;
 
 import java.time.LocalDateTime;
-import java.util.Set;
 
 public class UserResponse {
 
     private Long id;
     private String username;
     private String email;
+    private String firstname;
+    private String lastname;
+    private String role;
     private LocalDateTime createdAt;
-    private Set<String> roles;
 
     public UserResponse() {
     }
 
-    public UserResponse(Long id, String username, String email, LocalDateTime createdAt, Set<String> roles) {
+    public UserResponse(Long id, String username, String email, String firstname, String lastname, String role, LocalDateTime createdAt) {
         this.id = id;
         this.username = username;
         this.email = email;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.role = role;
         this.createdAt = createdAt;
-        this.roles = roles;
     }
 
     public Long getId() {
@@ -46,19 +49,35 @@ public class UserResponse {
         this.email = email;
     }
 
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
 
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
-    }
-
-    public Set<String> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(Set<String> roles) {
-        this.roles = roles;
     }
 }
