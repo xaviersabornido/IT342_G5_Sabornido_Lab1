@@ -70,8 +70,10 @@ public class AuthService {
                 user.getId(),
                 user.getUsername(),
                 user.getEmail(),
-                user.getCreatedAt(),
-                user.getRoles()
+                user.getFirstname(),
+                user.getLastname(),
+                user.getRole(),
+                user.getCreatedAt()
         );
     }
 }
