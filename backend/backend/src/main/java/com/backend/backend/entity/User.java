@@ -30,6 +30,14 @@ public class User {
     @Column(nullable = false, unique = true, length = 100)
     private String email;
 
+    @Size(max = 100)
+    @Column(name = "firstname", length = 100)
+    private String firstname;
+
+    @Size(max = 100)
+    @Column(name = "lastname", length = 100)
+    private String lastname;
+
     @NotBlank
     @Column(name = "password_hash", nullable = false, length = 255)
     private String passwordHash;
@@ -40,6 +48,9 @@ public class User {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
+    @Column(name = "role", length = 50)
+    private String role;
+
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"))
     @Column(name = "role")
@@ -49,8 +60,11 @@ public class User {
     protected void onCreate() {
         createdAt = LocalDateTime.now();
         updatedAt = LocalDateTime.now();
+        if (role == null || role.isEmpty()) {
+            role = "USER";
+        }
         if (roles.isEmpty()) {
-            roles.add("USER");
+            roles.add(role);
         }
     }
 
@@ -93,6 +107,22 @@ public class User {
         this.email = email;
     }
 
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
     public String getPasswordHash() {
         return passwordHash;
     }
@@ -115,6 +145,14 @@ public class User {
 
     public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public Set<String> getRoles() {
