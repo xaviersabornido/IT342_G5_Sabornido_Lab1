@@ -8,11 +8,11 @@ function getAuthHeaders() {
   };
 }
 
-export async function register(username, email, password) {
+export async function register(username, email, password, role = 'RENTER') {
   const res = await fetch(`${API_BASE}/auth/register`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ username, email, password }),
+    body: JSON.stringify({ username, email, password, role }),
   });
   const data = await res.json();
   if (!res.ok) {
